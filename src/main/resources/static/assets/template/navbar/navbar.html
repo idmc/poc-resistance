@@ -1,0 +1,26 @@
+<div xmlns="http://www.w3.org/1999/html">
+    <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="assets/images/logo-idmalert.png" height="50px"/></a>
+        </div>
+        <div class="collapse navbar-collapse" ng-class="{'in':!navCollapsed}">
+            <ul class="nav navbar-nav" ng-transclude>
+
+            </ul>
+            <div class="nav navbar-text">
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><p class="navbar-text"><span class="status-{{clusterStatus.status}}">[es cluster: {{clusterStatus.name}}]</span></p></li>
+                <li><p class="navbar-text"><a href="https://login.idmcore.com/account/logout/">Uitloggen</a></p></li>
+                <li>&nbsp;</li>
+            </ul>
+        </div>
+    </nav>
+</div>

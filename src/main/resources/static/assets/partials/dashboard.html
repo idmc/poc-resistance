@@ -1,0 +1,20 @@
+<md-grid-list
+        md-cols-sm="1" md-cols-md="1" md-cols-gt-md="3"
+        md-row-height-gt-md="1:1" md-row-height="1:1"
+        md-gutter="8px" md-gutter-gt-sm="4px" >
+    <md-grid-tile md-rowspan="1"
+                  md-colspan="1"
+                  md-colspan-sm="1" >
+        <lum-am-xy-chart chart-id="chartXY" chart-data="chartDataXY"/>
+    </md-grid-tile>
+    <md-grid-tile md-rowspan="1"
+                  md-colspan="1"
+                  md-colspan-sm="1" >
+        <lum-am-chart chart-id="chartColumn" chart-data="chartData" click-callback="clickChart(data)"/>
+    </md-grid-tile>
+    <md-grid-tile md-rowspan="1"
+                  md-colspan="1"
+                  md-colspan-sm="1" >
+        <lum-am-gauge-chart chart-id="chartGauge" chart-data="chartDataGauge"/>
+    </md-grid-tile>
+</md-grid-list>

@@ -1,0 +1,9 @@
+{
+  "name": "idmc-resistance",
+  "dependencies": {
+    "angular": "~1.3",
+    "angular-route": "~1.4",
+    "fontawesome": "~4.3",
+    "angular-material":"~0.10"
+  }
+}

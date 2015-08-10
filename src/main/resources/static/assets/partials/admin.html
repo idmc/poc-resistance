@@ -1,0 +1,38 @@
+<p>This is a utility page to help with importing and give some status information.</p>
+<div class="row">
+    <div class="col-sm-4" role="form">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title">Import events</h3>
+            </div>
+            <div class="panel-body">
+                <p>Using this button imports all events</p>
+                <button ng-hide="importRunning" type="button" class="btn btn-default" ng-click="reloadEvents()">reload events
+                </button>
+                <i ng-show="importRunning" class="fa fa-refresh fa-spin fa-2x"></i>
+            </div>
+            <div class="panel-footer">
+                <p>Number of events: {{numberOfEvents}}
+                    <button type="button" class="btn btn-default btn-xs" title="Refresh"
+                            ng-click="countEvents()"><span class="fa fa-refresh"></span></button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4" role="form">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title">Obfuscate events</h3>
+            </div>
+            <div class="panel-body">
+                <p>Using this button creates obfuscate events</p>
+                <button ng-hide="obfuscateRunning" type="button" class="btn btn-default" ng-click="obfuscateEvents()">obfuscate events
+                </button>
+                <i ng-show="obfuscateRunning" class="fa fa-refresh fa-spin fa-2x"></i>
+            </div>
+            <div class="panel-footer">
+                <p>better not run this during import of events</p>
+            </div>
+        </div>
+    </div>
+</div>

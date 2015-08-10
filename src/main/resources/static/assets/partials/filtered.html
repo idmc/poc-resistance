@@ -1,0 +1,20 @@
+<div>
+    <div>
+        <div class="md-button md-raised"
+             ng-repeat="(key,value) in clickFilters">{{key}} <span ng-click="removeFilter(key)"><i class="fa fa-remove"></i></span>&nbsp;<span ng-click="negateFilter(key)"><i class="fa fa-{{value.sign}}-square-o"></i></span></div>
+    </div>
+    <div>
+        <md-grid-list
+                md-cols-sm="1" md-cols-md="6" md-cols-gt-md="6"
+                md-row-height-gt-md="1:1" md-row-height="4:3"
+                md-gutter="8px" md-gutter-gt-sm="4px">
+            <md-grid-tile md-rowspan="2" md-colspan="2">
+                <lum-am-pie-chart chart-id="filteredChartYears" chart-data="chartData"
+                                  click-callback="clickChart(select,data,sliceIndex)"/>
+            </md-grid-tile>
+            <md-grid-tile md-rowspan="2" md-colspan="4">
+                <lum-am-time-chart chart-id="filteredBRMO" chart-data="chartDataBRMO"/>
+            </md-grid-tile>
+        </md-grid-list>
+    </div>
+</div>

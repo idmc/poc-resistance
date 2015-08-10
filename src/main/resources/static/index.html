@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IDMC Resistentie</title>
+    <link href="assets/style/app.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/amcharts/plugins/export/export.css" rel="stylesheet">
+</head>
+<body ng-controller="AppCtrl" layout="column">
+
+<md-toolbar layout="row" layout-align="end center">
+    <span>IDMCore Resistance</span>
+    <md-tabs md-stretch-tabs md-selected="selectedIndex" flex>
+        <md-tab>  <a href="#/dashboard">Multiple graphs</a> </md-tab>
+        <md-tab>  <a href="#/filtered">With filters</a> </md-tab>
+    </md-tabs>
+    <md-button ng-click="toggleRight()">
+        <md-icon>keyboard_arrow_left</md-icon>
+    </md-button>
+</md-toolbar>
+
+<div flex layout="row">
+    <div layout="column" flex>
+        <section ng-view>
+        </section>
+    </div>
+    <div layout="column" style="width: 200px" ng-if="showFilter">
+        <md-toolbar layout-padding><md-heading>Choosen Filters</md-heading></md-toolbar>
+        <md-content layout-padding>
+            <md-list>
+                <md-subheading>Filters</md-subheading>
+                <md-list-item ng-repeat="item in chosenFilters">
+                    <span>{{item.key}}</span>
+                    <span>{{item.value}}</span>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </div>
+    <div layout="column" ng-if="showCreateFilter" flex="50">
+        <md-toolbar layout-padding><md-heading>Create Filters</md-heading></md-toolbar>
+        <md-content layout-padding>
+            <form>
+                <md-input-container>
+                    <label for="testInput">Test input</label>
+                    <input type="text" id="testInput"
+                           ng-model="data">
+                </md-input-container>
+            </form>
+        </md-content>
+    </div>
+
+</div>
+
+<script src="assets/amcharts/amcharts.js" type="text/javascript"></script>
+<script src="assets/amcharts/serial.js" type="text/javascript"></script>
+<script src="assets/amcharts/xy.js" type="text/javascript"></script>
+<script src="assets/amcharts/gauge.js" type="text/javascript"></script>
+<script src="assets/amcharts/pie.js" type="text/javascript"></script>
+<script src="assets/amcharts/plugins/export/export.min.js" type="text/javascript"></script>
+<script src="assets/amcharts/plugins/responsive/responsive.min.js" type="text/javascript"></script>
+<script src="assets/js/idmc-resistance.js"></script>
+</body>
+</html>

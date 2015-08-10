@@ -1,0 +1,25 @@
+body {
+}
+
+.md-tab > a {
+  color: white;
+  text-decoration: none;
+}
+
+.md-sidebar-nav {
+  max-width: 600px;
+  min-width: 600px;
+  width: 600px;
+}
+
+.status-success {
+  color: darkgreen;
+}
+
+.status-warn {
+  color: darkgoldenrod;
+}
+
+.status-danger {
+  color: darkred;
+}
